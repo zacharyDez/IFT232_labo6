@@ -11,6 +11,14 @@ public class CasualSession extends Session {
     public CasualSession(Labo6Main l, User u) {
         super(l, u);
     }
+    @Override
+    public String generateGreeting(){
+        TextList l = TextDatabase.getAllMessages();
+        // keep modifie l original
+        l.keep(TextMessage.TextKey.isSeductive, false);
+        l.keep(TextMessage.TextKey.isGreeting, true);
+        return l.random().getMessage();
+    }
 
     @Override
     public String generateAnswer(){

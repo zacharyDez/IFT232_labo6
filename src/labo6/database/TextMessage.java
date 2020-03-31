@@ -14,8 +14,7 @@ public class TextMessage {
 		isPassiveAggressive(4),
 		isGreeting(5),
 		forGender(6);
-		
-		
+
 		private int value;
 		private TextKey(int v){
 			value=v;

@@ -19,4 +19,12 @@ public class SeductionSession extends  Session {
         return l.random().getMessage();
     }
 
+    @Override
+    public String generateGreeting(){
+        TextList l = TextDatabase.getAllMessages();
+        // keep modifie l original
+        l.keep(TextMessage.TextKey.isSeductive, true);
+        l.keep(TextMessage.TextKey.isGreeting, true);
+        return l.random().getMessage();
+    }
 }

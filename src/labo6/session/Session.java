@@ -6,6 +6,8 @@ import labo6.User;
 import labo6.bots.ChatBot;
 import labo6.database.PictureDatabase;
 import labo6.database.TextDatabase;
+import labo6.database.TextList;
+import labo6.database.TextMessage;
 
 
 /*
@@ -31,7 +33,20 @@ public class Session {
 	}
 
 	public String generateAnswer(){
-		return TextDatabase.getAllMessages().random().getMessage();
+		TextList l = TextDatabase.getAllMessages();
+		// keep modify la liste initiale
+		l.keep(TextMessage.TextKey.isGreeting, true);
+		return l.random().getMessage();
+	}
+
+	private void applyFilter(TextMessage.TextKey key, boolean b, TextList l){
+			l.keep(key, b);
+	}
+	public String generateGreeting(){
+		TextList l = TextDatabase.getAllMessages();
+		// keep modifie l original
+		l.keep(TextMessage.TextKey.isGreeting, true);
+		return l.random().getMessage();
 	}
 
 	public void start() {
@@ -39,7 +54,7 @@ public class Session {
 		robot = new ChatBot(human, "Other", PictureDatabase.getAllPictures().random(), Gender.random());
 		ui.initBackGround(robot);
 		
-		robot.appendMessage("Hello there!");
+		robot.appendMessage(generateGreeting());
 		String oldText = human.getUI().getText();
 		while (!hasEnded()) {
 
