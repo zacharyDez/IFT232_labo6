@@ -15,6 +15,7 @@ import javax.swing.SwingUtilities;
 import labo6.Ressources.Country;
 import labo6.Ressources.Gender;
 import labo6.bots.ChatBot;
+import labo6.session.CasualSession;
 import labo6.session.SeductionSession;
 import labo6.session.Session;
 
@@ -34,6 +35,7 @@ public class Labo6Main extends JFrame {
 	
 	private final String NORMAL_SESSION = "normal";
 	private final String SEDUCTION_SESSION = "seduction";
+	private final String CASUAL_SESSION = "casual";
 	private String sessionType = NORMAL_SESSION;
 
 
@@ -61,6 +63,8 @@ public class Labo6Main extends JFrame {
 				session = new Session(this,humanUser);
 			} else if(sessionType.equals(SEDUCTION_SESSION)){
 				session = new SeductionSession(this, humanUser);
+			} else if(sessionType.equals(CASUAL_SESSION)){
+				session = new CasualSession(this, humanUser);
 			}
 			else
 			{
