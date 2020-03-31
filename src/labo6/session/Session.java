@@ -5,6 +5,7 @@ import labo6.Ressources.Gender;
 import labo6.User;
 import labo6.bots.ChatBot;
 import labo6.database.PictureDatabase;
+import labo6.database.TextDatabase;
 
 
 /*
@@ -29,6 +30,10 @@ public class Session {
 		sleeper = Thread.currentThread();
 	}
 
+	public String generateAnswer(){
+		return TextDatabase.getAllMessages().random().getMessage();
+	}
+
 	public void start() {
 
 		robot = new ChatBot(human, "Other", PictureDatabase.getAllPictures().random(), Gender.random());
@@ -42,7 +47,7 @@ public class Session {
 
 			if (!human.getUI().getText().equals(oldText)) {
 
-				robot.appendMessage(robot.generateAnswer());
+				robot.appendMessage(generateAnswer());
 				oldText = human.getUI().getText();
 			}
 

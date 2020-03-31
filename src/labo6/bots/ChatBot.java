@@ -27,10 +27,6 @@ public class ChatBot extends User {
 		getUI().appendMessage(msg);
 	}
 
-	public String generateAnswer(){
-		return TextDatabase.getAllMessages().random().getMessage();
-	}
-
 	public User getPeer(){
 		return peer;
 	}
