@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/labo6/labo6/session/SeductionSession.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/labo6/labo6/session/SeductionSession.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/labo6/labo6/session/Session.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/labo6/labo6/session/Session.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labo6/database/TextMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labo6/database/TextMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/labo6/session/CasualSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labo6/session/CasualSession.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/labo6/session/SeductionSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labo6/session/SeductionSession.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/labo6/session/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labo6/session/Session.java" afterDir="false" />
@@ -54,7 +53,7 @@
     <configuration name="Labo6Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="labo6.Labo6Main" />
       <module name="labo6" />
-      <option name="PROGRAM_PARAMETERS" value="seduction" />
+      <option name="PROGRAM_PARAMETERS" value="casual" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="labo6.*" />
@@ -81,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585679811621</updated>
-      <workItem from="1585679816212" duration="2469000" />
+      <workItem from="1585679816212" duration="3287000" />
     </task>
     <servers />
   </component>
@@ -89,10 +88,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585682292150">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585683111964">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585682292150" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585683111964" />
     <state x="566" y="297" width="403" height="236" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1585680256703">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -101,21 +100,21 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="593" y="276" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585680582958" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1585682297093">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1585683294232">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585682297093" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1585682297093">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585683294232" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1585683294231">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585682297093" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1585682297092">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585683294231" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1585683294231">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585682297092" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1585682297093">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585683294231" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1585683294231">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585682297093" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585683294231" />
   </component>
 </project>
