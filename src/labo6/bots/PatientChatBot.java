@@ -11,8 +11,7 @@ public class PatientChatBot extends ChatBot {
     }
 
     @Override
-    public boolean wakeUp(String message){
-        int lastIdx = message.length()-1;
-        return message.indexOf("?")==lastIdx;
+    public boolean checkForWakeUp() {
+        return peer.getText().endsWith("?");
     }
 }

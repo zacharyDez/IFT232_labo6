@@ -10,7 +10,7 @@ public class ImpatientChatBot extends ChatBot  {
     }
 
     @Override
-    public boolean wakeUp(String message){
-        return !message.isEmpty();
+    public boolean checkForWakeUp() {
+        return !peer.getText().isEmpty();
     }
 }

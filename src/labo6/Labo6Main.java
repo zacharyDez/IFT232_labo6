@@ -32,7 +32,7 @@ public class Labo6Main extends JFrame {
 	private Country userCountry = Country.Canada;
 	private Gender userGender = Gender.male;	
 	private Session session;
-	private String sessionType;
+	private String sessionType=Session.NORMAL_SESSION;
 
 	public Labo6Main(String[] args) {
 		
@@ -49,7 +49,6 @@ public class Labo6Main extends JFrame {
 	 */
 	public void startTheRoulette() {
 
-		
 		while (true) {
 
 			humanUser = new User("Me", userCountry, userGender);

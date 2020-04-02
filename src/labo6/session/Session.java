@@ -4,6 +4,7 @@ import labo6.Labo6Main;
 import labo6.Ressources.Gender;
 import labo6.User;
 import labo6.bots.ChatBot;
+import labo6.bots.PatientChatBot;
 import labo6.database.*;
 
 /*
@@ -21,7 +22,7 @@ public class Session {
     private boolean ended;
     private Thread sleeper;
 
-    private static final String NORMAL_SESSION = "normal";
+    public static final String NORMAL_SESSION = "normal";
     private static final String SEDUCTION_SESSION = "seduction";
     private static final String CASUAL_SESSION = "casual";
 
@@ -46,6 +47,10 @@ public class Session {
         }
 
         return session;
+    }
+
+    public ChatBot createChatBot(User p, String n, Picture pic, Gender g){
+        return new PatientChatBot(p, n, pic, g);
     }
 
 
@@ -73,34 +78,28 @@ public class Session {
 
     public void start() {
 
-        robot = new ChatBot(human, "Other", getSuitablePictures().random(), Gender.random());
+        robot = createChatBot(human, "Other", getSuitablePictures().random(), Gender.random());
         ui.initBackGround(robot);
 
         robot.appendMessage(generateGreeting());
-        String oldText = human.getUI().getText();
         while (!hasEnded()) {
 
             robot.sleep(2000);
 
-            if (!human.getUI().getText().equals(oldText)) {
+            if (robot.wakeUp()) {
 
                 robot.appendMessage(generateAnswer());
-                oldText = human.getUI().getText();
             }
 
         }
 
     }
 
-    private boolean chechForWakeUp(String message){
-    	return robot.wakeUp(message);
-	}
-
     /*
      * Appelé par le bouton SUIVANT
      */
     public void changeChatBot() {
-        robot = new ChatBot(human, "Other", PictureDatabase.getAllPictures().random(), Gender.random());
+        robot = createChatBot(human, "Other", PictureDatabase.getAllPictures().random(), Gender.random());
         ui.initBackGround(robot);
     }
 

@@ -3,12 +3,12 @@ package labo6.bots;
 import labo6.Ressources.Gender;
 import labo6.User;
 import labo6.database.Picture;
-import labo6.database.TextDatabase;
 
-public class ChatBot extends User {
+public abstract class ChatBot extends User {
 
 	//L'utilisateur avec lequel le robot est en communication.
-	private User peer;
+	protected User peer;
+	protected String oldText = "";
 
 	public ChatBot(User p, String n, Picture pic, Gender g) {
 		super(n, pic, g);
@@ -31,8 +31,14 @@ public class ChatBot extends User {
 		return peer;
 	}
 
+	public boolean wakeUp(){
+		boolean res = false;
+		if(!peer.getText().equals(oldText) && checkForWakeUp()){
+			res =  true;
+		}
+		oldText = peer.getText();
+		return res;
+	}
 
-    public boolean wakeUp(String message) {
-		return true;
-    }
+	public abstract boolean checkForWakeUp();
 }
