@@ -30,6 +30,6 @@ public class CasualSession extends Session {
 
     @Override
     public ChatBot createChatBot(User p, String n, Picture pic, Ressources.Gender g){
-        return new SlowmoChatBot(p, n, pic, g);
+        return new SlowmoChatBot(this, p, n, pic, g);
     }
 }

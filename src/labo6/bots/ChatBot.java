@@ -12,8 +12,9 @@ public abstract class ChatBot extends User {
 	protected String oldText = "";
 	protected Session session;
 
-	public ChatBot(User p, String n, Picture pic, Gender g) {
+	public ChatBot(Session s, User p, String n, Picture pic, Gender g) {
 		super(n, pic, g);
+		session = s;
 		peer = p;
 	}
 

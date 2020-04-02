@@ -3,12 +3,12 @@ package labo6.bots;
 import labo6.Ressources;
 import labo6.User;
 import labo6.database.Picture;
-import labo6.database.TextDatabase;
+import labo6.session.Session;
 
 
 public class ImpatientChatBot extends ChatBot  {
-    public ImpatientChatBot(User p, String n, Picture pic, Ressources.Gender g) {
-        super(p, n, pic, g);
+    public ImpatientChatBot(Session s, User p, String n, Picture pic, Ressources.Gender g) {
+        super(s, p, n, pic, g);
     }
 
     @Override
