@@ -30,22 +30,22 @@ public class Session {
 		sleeper = Thread.currentThread();
 	}
 
-	public String generateAnswer(){
+	private String generateAnswer(){
 		return getSuitableMessages().random().getMessage();
 	}
 
-	public String generateGreeting(){
+	private String generateGreeting(){
 		TextList l = getSuitableMessages();
 		// keep modifie l original
 		l.keep(TextMessage.TextKey.isGreeting, true);
 		return l.random().getMessage();
 	}
 
-	public PictureList getSuitablePictures(){
+	protected PictureList getSuitablePictures(){
 		return PictureDatabase.getAllPictures();
 	}
 
-	public TextList getSuitableMessages(){
+	protected TextList getSuitableMessages(){
 		return TextDatabase.getAllMessages();
 	}
 

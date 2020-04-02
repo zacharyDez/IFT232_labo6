@@ -12,14 +12,14 @@ public class SeductionSession extends  Session {
     }
 
     @Override
-    public TextList getSuitableMessages(){
+    protected TextList getSuitableMessages(){
         TextList l = super.getSuitableMessages();
         l.keep(TextKey.isSeductive, true);
         return l;
     }
 
     @Override
-    public PictureList getSuitablePictures(){
+    protected PictureList getSuitablePictures(){
         PictureList l = super.getSuitablePictures();
         l.keep(PictureKey.isSeductive, true);
         return l;
