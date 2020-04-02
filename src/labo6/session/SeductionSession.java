@@ -5,7 +5,6 @@ import labo6.Ressources;
 import labo6.User;
 import labo6.bots.ChatBot;
 import labo6.bots.ImpatientChatBot;
-import labo6.bots.PatientChatBot;
 import labo6.database.*;
 import labo6.database.TextMessage.TextKey;
 import labo6.database.Picture.PictureKey;

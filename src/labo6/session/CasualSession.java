@@ -4,7 +4,6 @@ import labo6.Labo6Main;
 import labo6.Ressources;
 import labo6.User;
 import labo6.bots.ChatBot;
-import labo6.bots.ImpatientChatBot;
 import labo6.bots.SlowmoChatBot;
 import labo6.database.*;
 
