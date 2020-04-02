@@ -4,8 +4,9 @@ import labo6.Labo6Main;
 import labo6.Ressources.Gender;
 import labo6.User;
 import labo6.bots.ChatBot;
-import labo6.bots.PatientChatBot;
 import labo6.database.*;
+import labo6.session.profiles.NormalProfile;
+import labo6.session.profiles.Profiler;
 
 /*
  * Cette classe représente une session d'un utilisateur humain
@@ -26,6 +27,8 @@ public class Session {
     public static final String NORMAL_SESSION = "normal";
     private static final String SEDUCTION_SESSION = "seduction";
     private static final String CASUAL_SESSION = "casual";
+
+    Profiler profiler;
 
     public Session(Labo6Main l, User u) {
         ui = l;
@@ -50,56 +53,37 @@ public class Session {
         return session;
     }
 
-    public ChatBot createChatBot(User p, String n, Picture pic, Gender g){
-        return ChatBot.createPatientChatBot(this, p, n, pic, g);
-    }
-
-
-    public String generateAnswer() {
-        TextList l = getSuitableMessages();
-        // keep modify la liste initiale
-        return l.random().getMessage();
-    }
-
-    public String generateGreeting() {
-        TextList l = getSuitableMessages();
-        // keep modifie l original
-        l.keep(TextMessage.TextKey.isGreeting, true);
-        return l.random().getMessage();
-    }
-
-    public PictureList getSuitablePictures() {
-        return PictureDatabase.getAllPictures();
-    }
-
-    public TextList getSuitableMessages() {
-        return TextDatabase.getAllMessages();
-    }
-
     public void start() {
 
-        robot = createChatBot(human, "Other", getSuitablePictures().random(), Gender.random());
+        // sets profile accordingly
+        createProfiler();
+        robot = profiler.createChatBot(this, human, "Other", profiler.getSuitablePictures().random(), Gender.random());
+
         ui.initBackGround(robot);
 
-        robot.appendMessage(generateGreeting());
+        robot.appendMessage(profiler.generateGreeting());
         while (!hasEnded()) {
 
             robot.waitForUser();
 
             if (robot.wakeUp()) {
 
-                robot.appendMessage(generateAnswer());
+                robot.appendMessage(profiler.generateAnswer());
             }
 
         }
 
     }
 
+    public void createProfiler() {
+        profiler = new NormalProfile();
+    }
+
     /*
      * Appelé par le bouton SUIVANT
      */
     public void changeChatBot() {
-        robot = createChatBot(human, "Other", PictureDatabase.getAllPictures().random(), Gender.random());
+        robot = profiler.createChatBot(this, human, "Other", PictureDatabase.getAllPictures().random(), Gender.random());
         ui.initBackGround(robot);
     }
 
@@ -113,5 +97,7 @@ public class Session {
         return ended;
     }
 
-
+    public Profiler getProfiler() {
+        return profiler;
+    }
 }

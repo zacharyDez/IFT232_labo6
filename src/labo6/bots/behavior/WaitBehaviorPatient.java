@@ -13,6 +13,6 @@ public class WaitBehaviorPatient extends WaitBehavior{
     @Override
     public void waitForUser() {
         bot.sleep(1000);
-        bot.appendMessage(bot.getSession().getSuitableMessages().random().getMessage());
+        bot.appendMessage(bot.getSession().getProfiler().getSuitableMessages().random().getMessage());
     }
 }
