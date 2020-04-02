@@ -5,6 +5,8 @@ import labo6.Ressources.Gender;
 import labo6.User;
 import labo6.bots.ChatBot;
 import labo6.database.*;
+import labo6.database.PictureDatabase;
+import labo6.database.PictureList;
 
 /*
  * Cette classe représente une session d'un utilisateur humain
@@ -29,10 +31,7 @@ public class Session {
 	}
 
 	public String generateAnswer(){
-		TextList l = getSuitableMessages();
-		// keep modify la liste initiale
-		l.keep(TextMessage.TextKey.isGreeting, true);
-		return l.random().getMessage();
+		return getSuitableMessages().random().getMessage();
 	}
 
 	public String generateGreeting(){
@@ -43,7 +42,7 @@ public class Session {
 	}
 
 	public PictureList getSuitablePictures(){
-		return 	PictureDatabase.getAllPictures();
+		return PictureDatabase.getAllPictures();
 	}
 
 	public TextList getSuitableMessages(){
