@@ -4,6 +4,7 @@ import labo6.Labo6Main;
 import labo6.Ressources.Gender;
 import labo6.User;
 import labo6.bots.ChatBot;
+import labo6.bots.PatientChatBot;
 import labo6.database.*;
 import labo6.database.PictureDatabase;
 import labo6.database.PictureList;
@@ -68,30 +69,36 @@ public class Session {
 
 	public void start() {
 
-		robot = new ChatBot(human, "Other", getSuitablePictures().random(), Gender.random());
+		robot = createChatBot(human, "Other", getSuitablePictures().random(), Gender.random());
 		ui.initBackGround(robot);
 		
 		robot.appendMessage(generateGreeting());
-		String oldText = human.getUI().getText();
+
 		while (!hasEnded()) {
 
 			robot.sleep(2000);
 
-			if (!human.getUI().getText().equals(oldText)) {
+			if (robot.wakeUp()) {
 
 				robot.appendMessage(generateAnswer());
-				oldText = human.getUI().getText();
+
 			}
 
 		}
 
 	}
-	
+
+	// C'est la Factory Method. Permet de choisir le type de ChatBot. Session est le créateur. SeductionSession et CasualSession sont créateurs concrets
+	protected ChatBot createChatBot(User human, String name, Picture pic, Gender gen) {
+		return new PatientChatBot(human, name, pic, gen);
+	}
+
+
 	/*
 	 * Appelé par le bouton SUIVANT
 	 */
 	public void changeChatBot() {
-		robot = new ChatBot(human, "Other", PictureDatabase.getAllPictures().random(), Gender.random());
+		robot = createChatBot(human, "Other", PictureDatabase.getAllPictures().random(), Gender.random());
 		ui.initBackGround(robot);
 	}
 	

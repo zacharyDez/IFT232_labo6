@@ -1,7 +1,10 @@
 package labo6.session;
 
 import labo6.Labo6Main;
+import labo6.Ressources;
 import labo6.User;
+import labo6.bots.ChatBot;
+import labo6.bots.SlowMoChatBot;
 import labo6.database.*;
 
 public class CasualSession extends Session {
@@ -22,5 +25,11 @@ public class CasualSession extends Session {
         PictureList l = super.getSuitablePictures();
         l.keep(Picture.PictureKey.isSeductive, false);
         return l;
+    }
+
+    @Override
+    protected ChatBot createChatBot(User human, String name, Picture pic, Ressources.Gender gen) {
+
+        return new SlowMoChatBot(human, name, pic, gen);
     }
 }
