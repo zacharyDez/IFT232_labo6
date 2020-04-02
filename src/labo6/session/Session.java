@@ -63,7 +63,7 @@ public class Session {
 		return PictureDatabase.getAllPictures();
 	}
 
-	protected TextList getSuitableMessages(){
+	public TextList getSuitableMessages(){
 		return TextDatabase.getAllMessages();
 	}
 
@@ -76,7 +76,7 @@ public class Session {
 
 		while (!hasEnded()) {
 
-			robot.sleep(2000);
+			robot.waitForUser();
 
 			if (robot.wakeUp()) {
 
@@ -88,9 +88,11 @@ public class Session {
 
 	}
 
+
+
 	// C'est la Factory Method. Permet de choisir le type de ChatBot. Session est le créateur. SeductionSession et CasualSession sont créateurs concrets
 	protected ChatBot createChatBot(User human, String name, Picture pic, Gender gen) {
-		return new PatientChatBot(human, name, pic, gen);
+		return new PatientChatBot(this, human, name, pic, gen);
 	}
 
 

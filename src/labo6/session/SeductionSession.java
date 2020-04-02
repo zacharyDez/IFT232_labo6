@@ -16,7 +16,7 @@ public class SeductionSession extends  Session {
     }
 
     @Override
-    protected TextList getSuitableMessages(){
+    public TextList getSuitableMessages(){
         TextList l = super.getSuitableMessages();
         l.keep(TextKey.isSeductive, true);
         return l;
@@ -31,6 +31,6 @@ public class SeductionSession extends  Session {
 
     @Override
     protected ChatBot createChatBot(User human, String name, Picture pic, Ressources.Gender gen) {
-        return new ImpatientChatBot(human, name, pic, gen);
+        return new ImpatientChatBot(this, human, name, pic, gen);
     }
 }
