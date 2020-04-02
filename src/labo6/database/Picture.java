@@ -36,6 +36,10 @@ public class Picture {
 	public String getPath(){
 		return path;
 	}
+
+	public Gender getGender(){
+		return (Gender) values[PictureKey.gender.value];
+	}
 	
 	
 }

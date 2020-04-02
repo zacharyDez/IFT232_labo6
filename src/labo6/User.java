@@ -16,16 +16,24 @@ public class User {
 	private UserPanel ui;
 	private String name;
 	private Country country=Country.Canada;
+	private Picture picture;
+	private Gender gender;
 	
-	
-	public User(String n,Picture profilePic,Gender gender){	
-			name=n;			
-			ui = new UserPanel(name,profilePic.getPath(),Ressources.genderIcons[gender.value]);		
+	public User(String n,Picture profilePic,Gender g){
+			name=n;
+			picture = profilePic;
+			gender = g;
+			ui = new UserPanel(name,profilePic.getPath(),Ressources.genderIcons[g.value]);
 	}
-	
-	public User(String n,Country c,Gender gender){	
+
+	public Picture getPicture() {
+		return picture;
+	}
+
+	public User(String n, Country c, Gender g){
 		name=n;	
 		country=c;
+		gender = g;
 		ui = new UserPanel(name,Ressources.flagImages[c.value],Ressources.genderIcons[gender.value]);		
 }
 	
@@ -48,7 +56,11 @@ public class User {
 				
 		return line;
 	}
-	
+
+	public Gender getGender() {
+		return gender;
+	}
+
 	public Country getCountry(){
 		return country;
 	}

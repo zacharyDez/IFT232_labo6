@@ -11,6 +11,10 @@ import labo6.session.Session;
 
 public class SeductiveProfile extends Profiler {
 
+    public SeductiveProfile(Session s) {
+        super(s);
+    }
+
     @Override
     public TextList getSuitableMessages() {
         TextList l = super.getSuitableMessages();
@@ -22,12 +26,19 @@ public class SeductiveProfile extends Profiler {
     public PictureList getSuitablePictures() {
         PictureList l = super.getSuitablePictures();
         l.keep(Picture.PictureKey.isSeductive, true);
+
+        Ressources.Gender gender = session.getHuman().getGender();
+
+        // deuxieme signature de la methode gender
+        l.keep(gender, false);
+
         return l;
     }
 
     @Override
-    public ChatBot createChatBot(Session s, User p, String n, Picture pic, Ressources.Gender g) {
-        return ChatBot.createImpatientChatBot(s, p, n, pic, g);
+    public ChatBot createChatBot(Session s, User p, String n) {
+        Picture pic = getSuitablePictures().random();
+        return ChatBot.createImpatientChatBot(s, p, n, pic, pic.getGender());
     }
 
 

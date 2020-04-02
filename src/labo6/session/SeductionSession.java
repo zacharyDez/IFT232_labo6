@@ -11,6 +11,6 @@ public class SeductionSession extends  Session {
 
     @Override
     public void createProfiler(){
-        profiler = new SeductiveProfile();
+        profiler = new SeductiveProfile(this);
     }
 }

@@ -12,6 +12,6 @@ public class CasualSession extends Session {
 
     @Override
     public void createProfiler(){
-        profiler = new CasualProfile();
+        profiler = new CasualProfile(this);
     }
 }

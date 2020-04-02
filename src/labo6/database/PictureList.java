@@ -30,7 +30,24 @@ public class PictureList implements Cloneable {
 
 		pics = res;
 	}
-	
+
+	public void keep(Gender g, boolean b) {
+
+		ArrayList<Picture> res = new ArrayList<Picture>();
+
+		for(Picture pic:pics){
+			if (b && g.value == pic.getGender().value){
+				res.add(pic);
+			}
+
+			if(!b && g.value != pic.getGender().value){
+				res.add(pic);
+			}
+		}
+
+		pics = res;
+	}
+
 	public void remove(PictureKey key,Object value) {
 		
 		ArrayList<Picture> res = new ArrayList<Picture>();

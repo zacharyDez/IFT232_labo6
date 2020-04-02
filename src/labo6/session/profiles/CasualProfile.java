@@ -1,6 +1,5 @@
 package labo6.session.profiles;
 
-import labo6.Ressources;
 import labo6.User;
 import labo6.bots.ChatBot;
 import labo6.database.Picture;
@@ -10,6 +9,10 @@ import labo6.database.TextMessage;
 import labo6.session.Session;
 
 public class CasualProfile extends Profiler {
+
+    public CasualProfile(Session s) {
+        super(s);
+    }
 
     @Override
     public TextList getSuitableMessages(){
@@ -26,8 +29,8 @@ public class CasualProfile extends Profiler {
     }
 
     @Override
-    public ChatBot createChatBot(Session s, User p, String n, Picture pic, Ressources.Gender g){
-        return ChatBot.createSlowmoChatBot(s, p, n, pic, g);
+    public ChatBot createChatBot(Session s, User p, String n){
+        return super.createChatBot(s, p, n);
     }
 
 }

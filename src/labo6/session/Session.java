@@ -37,6 +37,10 @@ public class Session {
         sleeper = Thread.currentThread();
     }
 
+    public User getHuman() {
+        return human;
+    }
+
     public static Session createSession(String type, Labo6Main ui, User humanUser) {
         Session session;
 
@@ -57,7 +61,7 @@ public class Session {
 
         // sets profile accordingly
         createProfiler();
-        robot = profiler.createChatBot(this, human, "Other", profiler.getSuitablePictures().random(), Gender.random());
+        robot = profiler.createChatBot(this, human, "Other");
 
         ui.initBackGround(robot);
 
@@ -76,14 +80,14 @@ public class Session {
     }
 
     public void createProfiler() {
-        profiler = new NormalProfile();
+        profiler = new NormalProfile(this);
     }
 
     /*
      * Appelé par le bouton SUIVANT
      */
     public void changeChatBot() {
-        robot = profiler.createChatBot(this, human, "Other", PictureDatabase.getAllPictures().random(), Gender.random());
+        robot = profiler.createChatBot(this, human, "Other");
         ui.initBackGround(robot);
     }
 
@@ -99,5 +103,9 @@ public class Session {
 
     public Profiler getProfiler() {
         return profiler;
+    }
+
+    public ChatBot getChatBot() {
+        return robot;
     }
 }

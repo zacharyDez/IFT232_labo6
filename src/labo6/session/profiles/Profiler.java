@@ -7,9 +7,15 @@ import labo6.database.*;
 import labo6.session.Session;
 
 public abstract class Profiler {
+    Session session;
 
-    public ChatBot createChatBot(Session s, User p, String n, Picture pic, Ressources.Gender g){
-        return ChatBot.createPatientChatBot(s, p, n, pic, g);
+    public Profiler(Session s){
+        session=s;
+    }
+
+    public ChatBot createChatBot(Session s, User p, String n){
+        Picture pic = getSuitablePictures().random();
+        return ChatBot.createPatientChatBot(s, p, n, pic, pic.getGender());
     }
 
     public String generateAnswer() {
