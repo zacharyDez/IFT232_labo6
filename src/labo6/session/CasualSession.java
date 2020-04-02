@@ -11,14 +11,14 @@ public class CasualSession extends Session {
     }
 
     @Override
-    public TextList getSuitableMessages(){
+    protected TextList getSuitableMessages(){
         TextList l = super.getSuitableMessages();
         l.keep(TextMessage.TextKey.isSeductive, false);
         return l;
     }
 
     @Override
-    public PictureList getSuitablePictures(){
+    protected PictureList getSuitablePictures(){
         PictureList l = super.getSuitablePictures();
         l.keep(Picture.PictureKey.isSeductive, false);
         return l;
