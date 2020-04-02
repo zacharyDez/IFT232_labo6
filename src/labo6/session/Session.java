@@ -14,6 +14,7 @@ import labo6.database.*;
  * s'est déconnecté (change de pays ou de genre, via les boutons "PAYS" et "GENRE").
  */
 
+
 public class Session {
 
     private User human;
@@ -57,7 +58,6 @@ public class Session {
     public String generateAnswer() {
         TextList l = getSuitableMessages();
         // keep modify la liste initiale
-        l.keep(TextMessage.TextKey.isGreeting, true);
         return l.random().getMessage();
     }
 
@@ -84,7 +84,7 @@ public class Session {
         robot.appendMessage(generateGreeting());
         while (!hasEnded()) {
 
-            robot.sleep(2000);
+            robot.waitForUser();
 
             if (robot.wakeUp()) {
 

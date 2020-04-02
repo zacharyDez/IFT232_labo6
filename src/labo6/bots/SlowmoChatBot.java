@@ -20,4 +20,9 @@ public class SlowmoChatBot extends ChatBot {
         return res;
     }
 
+    @Override
+    public void waitForUser() {
+        sleep(2000);
+    }
+
 }
