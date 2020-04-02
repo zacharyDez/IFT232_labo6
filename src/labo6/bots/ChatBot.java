@@ -31,5 +31,8 @@ public class ChatBot extends User {
 		return peer;
 	}
 
-	
+
+    public boolean wakeUp(String message) {
+		return true;
+    }
 }
