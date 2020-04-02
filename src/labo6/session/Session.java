@@ -51,7 +51,7 @@ public class Session {
     }
 
     public ChatBot createChatBot(User p, String n, Picture pic, Gender g){
-        return new PatientChatBot(this, p, n, pic, g);
+        return ChatBot.createPatientChatBot(this, p, n, pic, g);
     }
 
 

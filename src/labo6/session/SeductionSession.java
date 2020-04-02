@@ -30,6 +30,6 @@ public class SeductionSession extends  Session {
 
     @Override
     public ChatBot createChatBot(User p, String n, Picture pic, Ressources.Gender g){
-        return new ImpatientChatBot(this, p, n, pic, g);
+        return ChatBot.createImpatientChatBot(this, p, n, pic, g);
     }
 }
