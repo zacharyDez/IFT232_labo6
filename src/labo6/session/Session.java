@@ -22,12 +22,29 @@ public class Session {
 	private Labo6Main ui;
 	private boolean ended;
 	private Thread sleeper;
+	public static final String NORMAL_SESSION = "normal";
+	public static final String SEDUCTION_SESSION = "seduction";
+	public static final String CASUAL_SESSION = "casual";
 
 	public Session(Labo6Main l, User u) {
 		ui = l;
 		human = u;
 		ended = false;
 		sleeper = Thread.currentThread();
+	}
+
+	public static Session createSession(String type, Labo6Main ui, User humanUser){
+		if (type.equals(NORMAL_SESSION)){
+			return new Session(ui,humanUser);
+		} else if(type.equals(SEDUCTION_SESSION)){
+			return new SeductionSession(ui, humanUser);
+		} else if(type.equals(CASUAL_SESSION)){
+			return new CasualSession(ui, humanUser);
+		}
+		else
+		{
+			throw new IllegalArgumentException ("Wrong session type: "+type);
+		}
 	}
 
 	private String generateAnswer(){
