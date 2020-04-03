@@ -30,7 +30,8 @@ public class CasualProfile extends Profiler {
 
     @Override
     public ChatBot createChatBot(Session s, User p, String n){
-        return super.createChatBot(s, p, n);
+        Picture pic = getSuitablePictures().random();
+        return ChatBot.createSlowmoChatBot(s, p, n, pic, pic.getGender());
     }
 
 }
