@@ -49,14 +49,14 @@ public abstract class Profiler {
         TextMessage.Language lang;
 
         if (country == Ressources.Country.France || country == Ressources.Country.Quebec){
-            // on ne veut que les messages en français
+            // On ne veut que les messages en français
             lang = TextMessage.Language.french;
         }
         else{
             lang = TextMessage.Language.english;
         }
 
-        // conditions pour le troll
+        // Conditions pour le troll
         if(!sameLanguageAsUser){
             if(lang==TextMessage.Language.french)
                 lang = TextMessage.Language.english;
@@ -65,7 +65,6 @@ public abstract class Profiler {
         }
 
         l.keep(TextMessage.TextKey.language, lang);
-
         return l;
 
     }
