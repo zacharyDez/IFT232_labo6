@@ -42,14 +42,17 @@ public abstract class Profiler {
     public TextList getSuitableMessages() {
         TextList l = TextDatabase.getAllMessages();
         Ressources.Country country = session.getHuman().getCountry();
+        TextMessage.Language lang;
         if (country == Ressources.Country.France || country == Ressources.Country.Quebec){
             // on ne veut que les messages en français
-            TextMessage.Language lang = TextMessage.Language.french;
+             lang = TextMessage.Language.french;
         }
         else{
-            TextMessage.Language lang = TextMessage.Language.english;
+            lang = TextMessage.Language.english;
         }
-        //l.keep(TextMessage.Language.french, true);
+
+        l.keep(TextMessage.TextKey.language, lang);
+
         return l;
 
     }
