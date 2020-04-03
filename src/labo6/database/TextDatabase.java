@@ -14,6 +14,7 @@ public class TextDatabase {
 	static {
 		// Lang, quest, seduc, pass, greet, gend
 
+		TEXT.add("Hey! Guess who's not wearing any underwear!", Language.english, false, true, true, false, true, Gender.unknown);
 		TEXT.add("Hi! How are you doing?", Language.english, true, false, false, false, true, Gender.unknown);
 		TEXT.add("Where are your wings? Cause I swear I thought you fell from heaven", Language.english, true, false,
 				true, false, true, Gender.unknown);
@@ -50,6 +51,7 @@ public class TextDatabase {
 		TEXT.add("I was feeling a little off today, but you definitely turned me on.", Language.english, true, true,
 				true, false, false, Gender.unknown);
 
+		TEXT.add("Hey! Devine qui qui porte pas de bobettes en ce moment!", Language.french, false, true, true, false, true, Gender.unknown);
 		TEXT.add("Salut! Comment ça va?", Language.french, true, false, false, false, true, Gender.unknown);
 		TEXT.add("Où sont tes ailes? J'aurais pu jurer que t'étais tombée du ciel...", Language.french, true, false,
 				true, false, true, Gender.female);

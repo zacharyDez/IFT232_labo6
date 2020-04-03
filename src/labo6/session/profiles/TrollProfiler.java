@@ -45,8 +45,10 @@ public class TrollProfiler extends Profiler {
     public String generateGreeting() {
         TextList l = getSuitableMessages();
         // keep modifie l original
+
         l.keep(TextMessage.TextKey.isGreeting, true);
         l.keep(TextMessage.TextKey.isOffensive, true);
+        TextList b = l;
         return l.random().getMessage();
     }
 

@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9df276de-791f-4b89-8d7b-b88625f96ee1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labo6/bots/ChatBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labo6/bots/ChatBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labo6/session/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labo6/session/Session.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labo6/session/TrollSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labo6/session/TrollSession.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labo6/session/profiles/Profiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labo6/session/profiles/Profiler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/labo6/labo6/database/TextDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/labo6/labo6/database/TextDatabase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/labo6/labo6/session/profiles/SeductiveProfile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/labo6/labo6/session/profiles/SeductiveProfile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/labo6/labo6/session/profiles/TrollProfiler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/labo6/labo6/session/profiles/TrollProfiler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/labo6/database/TextDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labo6/database/TextDatabase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/labo6/session/profiles/TrollProfiler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/labo6/session/profiles/TrollProfiler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +46,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="inlay.hints.JAVA" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -81,32 +83,64 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f4e7f161-5b5f-488a-9a06-1f3b743fe046" name="Default Changelist" comment="" />
+      <changelist id="9df276de-791f-4b89-8d7b-b88625f96ee1" name="Default Changelist" comment="" />
       <created>1585679811621</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585679811621</updated>
       <workItem from="1585679816212" duration="3884000" />
       <workItem from="1585831673221" duration="2423000" />
+      <workItem from="1585943347325" duration="2617000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="SHOW_OTHER_BRANCHES" value="true" />
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585924304256">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="186" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585945441344">
+      <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585924304256" />
+    <state x="186" y="86" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.777@0.23.1280.777" timestamp="1585945441344" />
     <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1585843812568">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585843812568" />
-    <state x="618" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1585834350730">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="515" y="307" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1585940908129">
+      <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="618" y="301" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585834350730" />
+    <state x="515" y="307" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1280.777@0.23.1280.777" timestamp="1585940908129" />
     <state x="566" y="297" width="403" height="236" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1585680256703">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -115,42 +149,66 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="593" y="276" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585839701511" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1585924449088">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="77" y="59" width="1024" height="621" key="DiffContextDialog" timestamp="1585940941684">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="77" y="59" width="1024" height="621" key="DiffContextDialog/0.23.1280.777@0.23.1280.777" timestamp="1585940941684" />
+    <state width="609" height="202" key="GridCell.Tab.0.bottom" timestamp="1585945737386">
+      <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585924449088" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1585924449088">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="609" height="202" key="GridCell.Tab.0.bottom/0.23.1280.777@0.23.1280.777" timestamp="1585945737386" />
+    <state width="609" height="202" key="GridCell.Tab.0.center" timestamp="1585945737386">
+      <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585924449088" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1585924449088">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="609" height="202" key="GridCell.Tab.0.center/0.23.1280.777@0.23.1280.777" timestamp="1585945737386" />
+    <state width="609" height="202" key="GridCell.Tab.0.left" timestamp="1585945737385">
+      <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585924449088" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1585924449088">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="609" height="202" key="GridCell.Tab.0.left/0.23.1280.777@0.23.1280.777" timestamp="1585945737385" />
+    <state width="609" height="202" key="GridCell.Tab.0.right" timestamp="1585945737386">
+      <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585924449088" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1585920395919">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="609" height="202" key="GridCell.Tab.0.right/0.23.1280.777@0.23.1280.777" timestamp="1585945737386" />
+    <state width="609" height="229" key="GridCell.Tab.1.bottom" timestamp="1585945372957">
+      <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585920395919" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1585920395919">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="609" height="229" key="GridCell.Tab.1.bottom/0.23.1280.777@0.23.1280.777" timestamp="1585945372957" />
+    <state width="609" height="229" key="GridCell.Tab.1.center" timestamp="1585945372956">
+      <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585920395919" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1585920395919">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="609" height="229" key="GridCell.Tab.1.center/0.23.1280.777@0.23.1280.777" timestamp="1585945372956" />
+    <state width="609" height="229" key="GridCell.Tab.1.left" timestamp="1585945372954">
+      <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585920395919" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1585920395919">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="609" height="229" key="GridCell.Tab.1.left/0.23.1280.777@0.23.1280.777" timestamp="1585945372954" />
+    <state width="609" height="229" key="GridCell.Tab.1.right" timestamp="1585945372956">
+      <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585920395919" />
+    <state width="609" height="229" key="GridCell.Tab.1.right/0.23.1280.777@0.23.1280.777" timestamp="1585945372956" />
+    <state x="130" y="30" key="SettingsEditor" timestamp="1585941439612">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="130" y="30" key="SettingsEditor/0.23.1280.777@0.23.1280.777" timestamp="1585941439612" />
+    <state x="814" y="127" key="VcsDiffUtil.ChangesDialog" timestamp="1585940869757">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="814" y="127" key="VcsDiffUtil.ChangesDialog/0.23.1280.777@0.23.1280.777" timestamp="1585940869757" />
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1585831674741">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1585831674741" />
+    <state x="413" y="315" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585946836060">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="413" y="315" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.777@0.23.1280.777" timestamp="1585946836060" />
     <state x="499" y="168" key="extract.method.dialog" timestamp="1585839674535">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -173,6 +231,7 @@
     <watches-manager>
       <configuration name="Application">
         <watch expression="pic.path" />
+        <watch expression="((TrollProfiler)this).session" custom="labo6.session.profiles.TrollProfiler" />
       </configuration>
     </watches-manager>
   </component>
