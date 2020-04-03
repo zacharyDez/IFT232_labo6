@@ -3,6 +3,7 @@ package labo6.database;
 import java.util.ArrayList;
 import java.util.Random;
 
+import labo6.Ressources;
 import labo6.Ressources.Gender;
 import labo6.database.Picture.PictureKey;
 
@@ -36,11 +37,19 @@ public class PictureList implements Cloneable {
 		ArrayList<Picture> res = new ArrayList<Picture>();
 
 		for(Picture pic:pics){
-			if (b && g.value == pic.getGender().value){
+
+			// for unknown
+			if(g.value == Gender.unknown.value && Gender.unknown.value == pic.getGender().value && b ){
 				res.add(pic);
 			}
 
-			if(!b && g.value != pic.getGender().value){
+			// included pics with b=true
+			if (b && g.value == pic.getGender().value && g.value!=Gender.unknown.value){
+				res.add(pic);
+			}
+
+			// excluded pics with b=false
+			if(!b && g.value != pic.getGender().value && g.value!=Gender.unknown.value){
 				res.add(pic);
 			}
 		}
@@ -91,7 +100,13 @@ public class PictureList implements Cloneable {
 	
 	public Picture random(){
 		Random generator = new Random();
-		return pics.get(generator.nextInt(pics.size()));		
+		try {
+			return pics.get(generator.nextInt(pics.size()));
+		} catch (IllegalArgumentException e){
+			System.out.println("No photos for given characteristics. Showing you troll.");
+			pics.add(new Picture("Troll.png", Gender.unknown, true, true));
+			return pics.get(pics.size()-1);
+		}
 	}
 
 }

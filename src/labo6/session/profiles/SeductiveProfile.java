@@ -19,6 +19,7 @@ public class SeductiveProfile extends Profiler {
     public TextList getSuitableMessages() {
         TextList l = super.getSuitableMessages();
         l.keep(TextMessage.TextKey.isSeductive, true);
+
         return l;
     }
 
@@ -29,8 +30,13 @@ public class SeductiveProfile extends Profiler {
 
         Ressources.Gender gender = session.getHuman().getGender();
 
-        // deuxieme signature de la methode gender
-        l.keep(gender, false);
+        if(gender.value != Ressources.Gender.unknown.value){
+            // deuxieme signature de la methode gender
+            l.keep(gender, false);
+        } else{
+            // si gender est unknown, afficher seulement des unknowns
+            l.keep(gender, true);
+        }
 
         return l;
     }

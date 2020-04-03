@@ -32,11 +32,26 @@ public abstract class Profiler {
     }
 
     public PictureList getSuitablePictures() {
-        return PictureDatabase.getAllPictures();
+        PictureList l = PictureDatabase.getAllPictures();
+        if (session.getHuman().getCountry() == Ressources.Country.Japan){
+            l.keep(Picture.PictureKey.isComic, true);
+        }
+        return l;
     }
 
     public TextList getSuitableMessages() {
-        return TextDatabase.getAllMessages();
+        TextList l = TextDatabase.getAllMessages();
+        Ressources.Country country = session.getHuman().getCountry();
+        if (country == Ressources.Country.France || country == Ressources.Country.Quebec){
+            // on ne veut que les messages en français
+            TextMessage.Language lang = TextMessage.Language.french;
+        }
+        else{
+            TextMessage.Language lang = TextMessage.Language.english;
+        }
+        //l.keep(TextMessage.Language.french, true);
+        return l;
+
     }
 
 }

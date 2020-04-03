@@ -30,6 +30,8 @@ public class PictureDatabase {
 		PICTURES.add("images/spike.png", Gender.male, true, true);
 		PICTURES.add("images/towel.png", Gender.male, false, true);
 		PICTURES.add("images/football2.png", Gender.male, false, false);
+		PICTURES.add("images/dog.png", Gender.unknown, true, true);
+
 
 	}
 
