@@ -46,6 +46,11 @@ public class ChatBot extends User {
         return bot;
     }
 
+    public static ChatBot createTrollChatBot(Session s, User p, String n, Picture pic, Gender gender) {
+        ChatBot bot = createImpatientChatBot(s, p, n, pic, gender);
+        return bot;
+    }
+
     private void setWait(WaitBehavior waitBehavior) {
         wait = waitBehavior;
     }
@@ -56,7 +61,6 @@ public class ChatBot extends User {
 
     public void sleep(int time) {
         try {
-
             Thread.sleep(time);
         } catch (InterruptedException e) {
         }

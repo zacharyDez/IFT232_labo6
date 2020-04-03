@@ -40,15 +40,28 @@ public abstract class Profiler {
     }
 
     public TextList getSuitableMessages() {
+        return getSuitableMessages(true);
+    }
+
+    public TextList getSuitableMessages(boolean sameLanguageAsUser) {
         TextList l = TextDatabase.getAllMessages();
         Ressources.Country country = session.getHuman().getCountry();
         TextMessage.Language lang;
+
         if (country == Ressources.Country.France || country == Ressources.Country.Quebec){
             // on ne veut que les messages en français
-             lang = TextMessage.Language.french;
+            lang = TextMessage.Language.french;
         }
         else{
             lang = TextMessage.Language.english;
+        }
+
+        // conditions pour le troll
+        if(!sameLanguageAsUser){
+            if(lang==TextMessage.Language.french)
+                lang = TextMessage.Language.english;
+            else
+                lang = TextMessage.Language.french;
         }
 
         l.keep(TextMessage.TextKey.language, lang);

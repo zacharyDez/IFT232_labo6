@@ -27,6 +27,8 @@ public class Session {
     public static final String NORMAL_SESSION = "normal";
     private static final String SEDUCTION_SESSION = "seduction";
     private static final String CASUAL_SESSION = "casual";
+    private static final String TROLL_SESSION = "troll";
+
 
     Profiler profiler;
 
@@ -50,6 +52,8 @@ public class Session {
             session = new SeductionSession(ui, humanUser);
         } else if (type.equals(CASUAL_SESSION)) {
             session = new CasualSession(ui, humanUser);
+        } else if (type.equals(TROLL_SESSION)) {
+            session = new TrollSession(ui, humanUser);
         } else {
             throw new IllegalArgumentException("Wrong session type: " + type);
         }
